@@ -10,9 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var networkManager: NetworkManager!
+
+    init(networkManager: NetworkManager) {
+        super.init(nibName: nil, bundle: nil)
+        self.networkManager = networkManager
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+            view.backgroundColor = .green
+            networkManager.getQuiz(number: 1) { result in
+                switch result {
+                case .success(let response):
+                    print(response.question)
+                    print(response.answer)
+                case .failure(let error):
+                    print(error)
+                }
+
+
+        }
     }
 
 
