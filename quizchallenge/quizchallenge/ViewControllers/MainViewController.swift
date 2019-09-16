@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     private var viewModel: QuizViewModelType
     private var quizView = QuizView()
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController {
+extension MainViewController {
     func showLoadingAlert(_ title: String = LocalizedStrings.loading, completion: (() -> Void)?) {
         loadingAlertController = AlertHelper.createLoadingAlert(title: title)
         DispatchQueue.main.async {
@@ -97,7 +97,12 @@ extension ViewController {
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension MainViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let text = textField.text,
             let textRange = Range(range, in: text) {
@@ -112,7 +117,7 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
-extension ViewController: TimerDelegate {
+extension MainViewController: TimerDelegate {
     func wantsToStart() {
         quizView.textField.isEnabled = true
         quizView.textField.becomeFirstResponder()

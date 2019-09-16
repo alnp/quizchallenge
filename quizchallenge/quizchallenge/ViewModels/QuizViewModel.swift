@@ -13,9 +13,9 @@ final class QuizViewModel: QuizViewModelType {
 
     var wordsFound: Int?
     var words: Int?
-    let secondsToDisplay: Int = 3
+    let secondsToDisplay: Int = 300
 
-    weak var controller: ViewController?
+    weak var controller: MainViewController?
     private var networkManager: NetworkManagerType
     internal var model: QuizModel {
         didSet {
@@ -27,7 +27,7 @@ final class QuizViewModel: QuizViewModelType {
         didSet {
             wordsFound = userAnswers.count
             self.controller?.updateTableView(with: userAnswers)
-            if userAnswers.count == 3, !userAnswers.isEmpty {
+            if userAnswers.count == model.answer.count, !userAnswers.isEmpty {
                 self.controller?.finishGame(timeout: false)
             }
         }

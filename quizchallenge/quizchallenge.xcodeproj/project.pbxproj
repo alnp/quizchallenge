@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CDF164C5232C473E00EDFE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF164C4232C473E00EDFE22 /* AppDelegate.swift */; };
-		CDF164C7232C473E00EDFE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF164C6232C473E00EDFE22 /* ViewController.swift */; };
+		CDF164C7232C473E00EDFE22 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF164C6232C473E00EDFE22 /* MainViewController.swift */; };
 		CDF164CC232C473F00EDFE22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF164CB232C473F00EDFE22 /* Assets.xcassets */; };
 		CDF164CF232C473F00EDFE22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF164CD232C473F00EDFE22 /* LaunchScreen.storyboard */; };
 		CDF164DA232C473F00EDFE22 /* quizchallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF164D9232C473F00EDFE22 /* quizchallengeTests.swift */; };
@@ -68,7 +68,7 @@
 /* Begin PBXFileReference section */
 		CDF164C1232C473E00EDFE22 /* quizchallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quizchallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF164C4232C473E00EDFE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDF164C6232C473E00EDFE22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDF164C6232C473E00EDFE22 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CDF164CB232C473F00EDFE22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDF164CE232C473F00EDFE22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDF164D0232C473F00EDFE22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 		CDF16560232FE6D900EDFE22 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CDF164C6232C473E00EDFE22 /* ViewController.swift */,
+				CDF164C6232C473E00EDFE22 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -425,7 +425,7 @@
 				CDF1650B232D5E1900EDFE22 /* QuizModel.swift in Sources */,
 				CDF1655D232FD8BE00EDFE22 /* String+Ext.swift in Sources */,
 				CDF164FA232D4A9300EDFE22 /* EndpointProtocol.swift in Sources */,
-				CDF164C7232C473E00EDFE22 /* ViewController.swift in Sources */,
+				CDF164C7232C473E00EDFE22 /* MainViewController.swift in Sources */,
 				CDF16556232FCC3900EDFE22 /* LocalizableStrings.swift in Sources */,
 				CDF1652F232EA39300EDFE22 /* FontFamily.swift in Sources */,
 				CDF1651D232E96ED00EDFE22 /* QuizView.swift in Sources */,
