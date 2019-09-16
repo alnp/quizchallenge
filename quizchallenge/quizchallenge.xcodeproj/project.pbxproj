@@ -44,6 +44,14 @@
 		CDF16547232EFB2700EDFE22 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16546232EFB2700EDFE22 /* AlertHelper.swift */; };
 		CDF16548232EFB2700EDFE22 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16546232EFB2700EDFE22 /* AlertHelper.swift */; };
 		CDF1654C232EFBC100EDFE22 /* AlertHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1654A232EFBC100EDFE22 /* AlertHelperTests.swift */; };
+		CDF1654E232FB3ED00EDFE22 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1654D232FB3ED00EDFE22 /* TableViewDataSource.swift */; };
+		CDF1654F232FB3ED00EDFE22 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1654D232FB3ED00EDFE22 /* TableViewDataSource.swift */; };
+		CDF16552232FCAC300EDFE22 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDF16550232FCAC300EDFE22 /* Localizable.strings */; };
+		CDF16553232FCAC300EDFE22 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDF16550232FCAC300EDFE22 /* Localizable.strings */; };
+		CDF16556232FCC3900EDFE22 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16555232FCC3900EDFE22 /* LocalizableStrings.swift */; };
+		CDF16557232FCC3900EDFE22 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16555232FCC3900EDFE22 /* LocalizableStrings.swift */; };
+		CDF16559232FD2B100EDFE22 /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16558232FD2B100EDFE22 /* ReusableIdentifier.swift */; };
+		CDF1655A232FD2B100EDFE22 /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16558232FD2B100EDFE22 /* ReusableIdentifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +98,10 @@
 		CDF16543232EEE9300EDFE22 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		CDF16546232EFB2700EDFE22 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		CDF1654A232EFBC100EDFE22 /* AlertHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelperTests.swift; sourceTree = "<group>"; };
+		CDF1654D232FB3ED00EDFE22 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		CDF16551232FCAC300EDFE22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = quizchallenge/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CDF16555232FCC3900EDFE22 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
+		CDF16558232FD2B100EDFE22 /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +231,7 @@
 		CDF1651F232E978300EDFE22 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CDF1655B232FD3B200EDFE22 /* LocalizableStrings */,
 				CDF1652D232E9EF000EDFE22 /* Fonts */,
 				CDF16520232E979A00EDFE22 /* Colors.swift */,
 				CDF16525232E996A00EDFE22 /* Fonts.swift */,
@@ -249,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				CDF16546232EFB2700EDFE22 /* AlertHelper.swift */,
+				CDF1654D232FB3ED00EDFE22 /* TableViewDataSource.swift */,
+				CDF16558232FD2B100EDFE22 /* ReusableIdentifier.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -259,6 +274,15 @@
 				CDF1654A232EFBC100EDFE22 /* AlertHelperTests.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		CDF1655B232FD3B200EDFE22 /* LocalizableStrings */ = {
+			isa = PBXGroup;
+			children = (
+				CDF16555232FCC3900EDFE22 /* LocalizableStrings.swift */,
+				CDF16550232FCAC300EDFE22 /* Localizable.strings */,
+			);
+			path = LocalizableStrings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +369,7 @@
 				CDF164CF232C473F00EDFE22 /* LaunchScreen.storyboard in Resources */,
 				CDF164CC232C473F00EDFE22 /* Assets.xcassets in Resources */,
 				CDF16532232EA3D200EDFE22 /* SF-Pro-Display-Bold.otf in Resources */,
+				CDF16552232FCAC300EDFE22 /* Localizable.strings in Resources */,
 				CDF1652B232E9EE800EDFE22 /* SF-Pro-Display-Semibold.otf in Resources */,
 				CDF16529232E9EE800EDFE22 /* SF-Pro-Display-Regular.otf in Resources */,
 				CDF164CA232C473E00EDFE22 /* Main.storyboard in Resources */,
@@ -355,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF16553232FCAC300EDFE22 /* Localizable.strings in Resources */,
 				CDF1652C232E9EE800EDFE22 /* SF-Pro-Display-Semibold.otf in Resources */,
 				CDF1652A232E9EE800EDFE22 /* SF-Pro-Display-Regular.otf in Resources */,
 				CDF16533232EA3D200EDFE22 /* SF-Pro-Display-Bold.otf in Resources */,
@@ -371,16 +397,19 @@
 			files = (
 				CDF16508232D5C9300EDFE22 /* QuizAPI.swift in Sources */,
 				CDF16535232EA71B00EDFE22 /* FooterView.swift in Sources */,
+				CDF1654E232FB3ED00EDFE22 /* TableViewDataSource.swift in Sources */,
 				CDF16521232E979A00EDFE22 /* Colors.swift in Sources */,
 				CDF16544232EEE9300EDFE22 /* QuizViewModel.swift in Sources */,
 				CDF1650D232D5FD700EDFE22 /* NetworkManager.swift in Sources */,
 				CDF16547232EFB2700EDFE22 /* AlertHelper.swift in Sources */,
 				CDF16506232D4E3D00EDFE22 /* NetworkRouter.swift in Sources */,
 				CDF16526232E996A00EDFE22 /* Fonts.swift in Sources */,
+				CDF16559232FD2B100EDFE22 /* ReusableIdentifier.swift in Sources */,
 				CDF1650F232D790A00EDFE22 /* NetworkErrors.swift in Sources */,
 				CDF1650B232D5E1900EDFE22 /* QuizModel.swift in Sources */,
 				CDF164FA232D4A9300EDFE22 /* EndpointProtocol.swift in Sources */,
 				CDF164C7232C473E00EDFE22 /* ViewController.swift in Sources */,
+				CDF16556232FCC3900EDFE22 /* LocalizableStrings.swift in Sources */,
 				CDF1652F232EA39300EDFE22 /* FontFamily.swift in Sources */,
 				CDF1651D232E96ED00EDFE22 /* QuizView.swift in Sources */,
 				CDF164C5232C473E00EDFE22 /* AppDelegate.swift in Sources */,
@@ -398,11 +427,14 @@
 				CDF16536232EA71B00EDFE22 /* FooterView.swift in Sources */,
 				CDF1651B232D87F200EDFE22 /* QuizModelTests.swift in Sources */,
 				CDF16513232D7D6100EDFE22 /* QuizAPITests.swift in Sources */,
+				CDF1654F232FB3ED00EDFE22 /* TableViewDataSource.swift in Sources */,
+				CDF1655A232FD2B100EDFE22 /* ReusableIdentifier.swift in Sources */,
 				CDF16518232D843400EDFE22 /* XCTestCaseExtension.swift in Sources */,
 				CDF164DA232C473F00EDFE22 /* quizchallengeTests.swift in Sources */,
 				CDF1653B232EC18900EDFE22 /* Fonts.swift in Sources */,
 				CDF16548232EFB2700EDFE22 /* AlertHelper.swift in Sources */,
 				CDF16524232E983100EDFE22 /* ColorsTests.swift in Sources */,
+				CDF16557232FCC3900EDFE22 /* LocalizableStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +463,14 @@
 				CDF164CE232C473F00EDFE22 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CDF16550232FCAC300EDFE22 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDF16551232FCAC300EDFE22 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

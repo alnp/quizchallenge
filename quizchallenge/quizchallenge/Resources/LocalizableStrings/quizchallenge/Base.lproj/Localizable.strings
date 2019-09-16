@@ -1,0 +1,12 @@
+"error" = "Error";
+"tryAgain" = "Try Again";
+"timeFinished" = "Time finished";
+"congratulations" = "Congratulations";
+"goodJob" = "Good job! You found all the answer on time. Keep up with great work.";
+"timeUp" = "Sorry, time is up! You got %d out of %d answers.";
+"playAgain" = "Play Again";
+"insertWord" = "Insert Word";
+"start" = "Start";
+"reset" = "Reset";
+"loading" = "Loading...";
+"insertWord" = "Insert Word";
