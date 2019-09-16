@@ -1,8 +1,8 @@
 import Foundation
 
 struct QuizModel {
-    let question: String
-    let answer: [String]
+    var question: String = ""
+    var answer: [String] = []
 }
 
 extension QuizModel: Decodable {

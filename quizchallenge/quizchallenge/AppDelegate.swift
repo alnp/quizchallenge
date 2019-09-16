@@ -14,10 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let networkManager = NetworkManager()
-        let appStartVC = ViewController(networkManager: networkManager)
+
+        let viewModel = QuizViewModel()
+        let controller = ViewController(viewModel: viewModel)
+        viewModel.controller = controller
+
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = appStartVC
+        self.window?.rootViewController = controller
         self.window?.makeKeyAndVisible()
         return true
     }

@@ -1,7 +1,7 @@
 import Foundation
 
 public enum QuizAPI {
-    case quiz(id:Int)
+    case quiz
 }
 
 extension QuizAPI: EndpointType {
@@ -17,8 +17,8 @@ extension QuizAPI: EndpointType {
 
     var path: String {
         switch self {
-        case .quiz(let id):
-            return "quiz/\(id)"
+        case .quiz:
+            return "quiz/1"
         }
     }
 

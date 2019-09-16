@@ -5,11 +5,15 @@ enum Result<T> {
     case failure(Error)
 }
 
-struct NetworkManager {
+protocol NetworkManagerType {
+    func getQuiz(completion: @escaping (_ result: Result<QuizModel>) -> ())
+}
+
+class NetworkManager: NetworkManagerType {
     private let router = Router<QuizAPI>()
 
-    func getQuiz(number: Int = 1, completion: @escaping (_ result: Result<QuizModel>) -> ()) {
-        router.request(.quiz(id: number), completion: { data, response, error in
+    func getQuiz(completion: @escaping (_ result: Result<QuizModel>) -> ()) {
+        router.request(.quiz, completion: { data, response, error in
             if error != nil {
                 completion(.failure(NetworkErrorRequest.noConnection))
             }
@@ -23,12 +27,9 @@ struct NetworkManager {
                         return
                     }
                     do {
-                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
-                        print("REMOVER: " + "\(jsonData)")
                         let apiResponse = try JSONDecoder().decode(QuizModel.self, from: responseData)
                         completion(.success(apiResponse))
                     }catch {
-                        print("REMOVER: " + "\(error)")
                         completion(.failure(NetworkErrorResponse.unableToDecode))
                     }
                 case .failure(let networkFailureError):

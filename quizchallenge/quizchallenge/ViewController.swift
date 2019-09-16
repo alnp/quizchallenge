@@ -1,42 +1,66 @@
-//
-//  ViewController.swift
-//  quizchallenge
-//
-//  Created by alessandra.l.pereira on 13/09/19.
-//  Copyright © 2019 alnp. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
-    var networkManager: NetworkManager!
+    private var viewModel: QuizViewModelType
+    private var quizView = QuizView()
+    private var loadingAlertController: UIAlertController = AlertHelper.createLoadingAlert(title: "")
+    private var alertController: UIAlertController = AlertHelper.createAlert(title: "",
+                                                                             message: nil,
+                                                                             buttonTitle: "",
+                                                                             handler: { })
 
-    init(networkManager: NetworkManager) {
+    init(viewModel: QuizViewModelType = QuizViewModel(),
+         quizView: QuizView = QuizView()) {
+        self.viewModel = viewModel
+        self.quizView = quizView
         super.init(nibName: nil, bundle: nil)
-        self.networkManager = networkManager
     }
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            view.backgroundColor = .green
-            networkManager.getQuiz(number: 1) { result in
-                switch result {
-                case .success(let response):
-                    print(response.question)
-                    print(response.answer)
-                case .failure(let error):
-                    print(error)
-                }
+    override func loadView() {
+        view = quizView
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.requestForQuiz()
+    }
 
+    func showQuiz(with model: QuizModel) {
+        quizView.show(question: model.question)
+    }
+
+    func showLoadingAlert(_ title: String = "Loading...", completion: (() -> Void)?) {
+        loadingAlertController = AlertHelper.createLoadingAlert(title: title)
+        DispatchQueue.main.async {
+            self.present(self.loadingAlertController, animated: true, completion: completion)
         }
     }
 
+    func dismissLoadingAlert() {
+        loadingAlertController.dismiss(animated: true)
+    }
 
+    func showErrorAlert(message: String) {
+        alertController = AlertHelper
+            .createAlert(title: "Error",
+                         message: message,
+                         buttonTitle: "Retry") { [weak self] in
+            self?.dismissAlert()
+            self?.viewModel.requestForQuiz()
+        }
+        DispatchQueue.main.async {
+            self.present(self.alertController, animated: true)
+        }
+    }
+
+    func dismissAlert() {
+        alertController.dismiss(animated: false)
+    }
 }
 

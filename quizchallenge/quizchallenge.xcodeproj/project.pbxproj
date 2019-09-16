@@ -24,6 +24,26 @@
 		CDF16516232D83CF00EDFE22 /* QuizModel.json in Resources */ = {isa = PBXBuildFile; fileRef = CDF16515232D83CF00EDFE22 /* QuizModel.json */; };
 		CDF16518232D843400EDFE22 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16517232D843400EDFE22 /* XCTestCaseExtension.swift */; };
 		CDF1651B232D87F200EDFE22 /* QuizModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1651A232D87F200EDFE22 /* QuizModelTests.swift */; };
+		CDF1651D232E96ED00EDFE22 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1651C232E96ED00EDFE22 /* QuizView.swift */; };
+		CDF16521232E979A00EDFE22 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16520232E979A00EDFE22 /* Colors.swift */; };
+		CDF16524232E983100EDFE22 /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16523232E983100EDFE22 /* ColorsTests.swift */; };
+		CDF16526232E996A00EDFE22 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16525232E996A00EDFE22 /* Fonts.swift */; };
+		CDF16529232E9EE800EDFE22 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDF16527232E9EE800EDFE22 /* SF-Pro-Display-Regular.otf */; };
+		CDF1652A232E9EE800EDFE22 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDF16527232E9EE800EDFE22 /* SF-Pro-Display-Regular.otf */; };
+		CDF1652B232E9EE800EDFE22 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDF16528232E9EE800EDFE22 /* SF-Pro-Display-Semibold.otf */; };
+		CDF1652C232E9EE800EDFE22 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDF16528232E9EE800EDFE22 /* SF-Pro-Display-Semibold.otf */; };
+		CDF1652F232EA39300EDFE22 /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1652E232EA39300EDFE22 /* FontFamily.swift */; };
+		CDF16530232EA39300EDFE22 /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1652E232EA39300EDFE22 /* FontFamily.swift */; };
+		CDF16532232EA3D200EDFE22 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDF16531232EA3D200EDFE22 /* SF-Pro-Display-Bold.otf */; };
+		CDF16533232EA3D200EDFE22 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDF16531232EA3D200EDFE22 /* SF-Pro-Display-Bold.otf */; };
+		CDF16535232EA71B00EDFE22 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16534232EA71B00EDFE22 /* FooterView.swift */; };
+		CDF16536232EA71B00EDFE22 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16534232EA71B00EDFE22 /* FooterView.swift */; };
+		CDF1653B232EC18900EDFE22 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16525232E996A00EDFE22 /* Fonts.swift */; };
+		CDF1653C232EC19600EDFE22 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16520232E979A00EDFE22 /* Colors.swift */; };
+		CDF16544232EEE9300EDFE22 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16543232EEE9300EDFE22 /* QuizViewModel.swift */; };
+		CDF16547232EFB2700EDFE22 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16546232EFB2700EDFE22 /* AlertHelper.swift */; };
+		CDF16548232EFB2700EDFE22 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF16546232EFB2700EDFE22 /* AlertHelper.swift */; };
+		CDF1654C232EFBC100EDFE22 /* AlertHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1654A232EFBC100EDFE22 /* AlertHelperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +78,18 @@
 		CDF16515232D83CF00EDFE22 /* QuizModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuizModel.json; sourceTree = "<group>"; };
 		CDF16517232D843400EDFE22 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
 		CDF1651A232D87F200EDFE22 /* QuizModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModelTests.swift; sourceTree = "<group>"; };
+		CDF1651C232E96ED00EDFE22 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		CDF16520232E979A00EDFE22 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CDF16523232E983100EDFE22 /* ColorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTests.swift; sourceTree = "<group>"; };
+		CDF16525232E996A00EDFE22 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		CDF16527232E9EE800EDFE22 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		CDF16528232E9EE800EDFE22 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		CDF1652E232EA39300EDFE22 /* FontFamily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
+		CDF16531232EA3D200EDFE22 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		CDF16534232EA71B00EDFE22 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		CDF16543232EEE9300EDFE22 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		CDF16546232EFB2700EDFE22 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		CDF1654A232EFBC100EDFE22 /* AlertHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +131,12 @@
 		CDF164C3232C473E00EDFE22 /* quizchallenge */ = {
 			isa = PBXGroup;
 			children = (
+				CDF16537232EB19300EDFE22 /* Helpers */,
+				CDF1651F232E978300EDFE22 /* Resources */,
+				CDF1651E232E96F200EDFE22 /* Views */,
 				CDF16509232D5E0100EDFE22 /* Model */,
 				CDF164F2232C4AA300EDFE22 /* Network */,
+				CDF16543232EEE9300EDFE22 /* QuizViewModel.swift */,
 				CDF164C4232C473E00EDFE22 /* AppDelegate.swift */,
 				CDF164C6232C473E00EDFE22 /* ViewController.swift */,
 				CDF164C8232C473E00EDFE22 /* Main.storyboard */,
@@ -114,6 +150,8 @@
 		CDF164D8232C473F00EDFE22 /* quizchallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				CDF16549232EFBAF00EDFE22 /* Helper */,
+				CDF16522232E982300EDFE22 /* Resources */,
 				CDF16519232D87E200EDFE22 /* Model */,
 				CDF16514232D83AF00EDFE22 /* JSONs */,
 				CDF16511232D7D4E00EDFE22 /* Network */,
@@ -167,6 +205,60 @@
 				CDF1651A232D87F200EDFE22 /* QuizModelTests.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CDF1651E232E96F200EDFE22 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDF1651C232E96ED00EDFE22 /* QuizView.swift */,
+				CDF16534232EA71B00EDFE22 /* FooterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CDF1651F232E978300EDFE22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDF1652D232E9EF000EDFE22 /* Fonts */,
+				CDF16520232E979A00EDFE22 /* Colors.swift */,
+				CDF16525232E996A00EDFE22 /* Fonts.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CDF16522232E982300EDFE22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDF16523232E983100EDFE22 /* ColorsTests.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CDF1652D232E9EF000EDFE22 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CDF16531232EA3D200EDFE22 /* SF-Pro-Display-Bold.otf */,
+				CDF16527232E9EE800EDFE22 /* SF-Pro-Display-Regular.otf */,
+				CDF16528232E9EE800EDFE22 /* SF-Pro-Display-Semibold.otf */,
+				CDF1652E232EA39300EDFE22 /* FontFamily.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CDF16537232EB19300EDFE22 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CDF16546232EFB2700EDFE22 /* AlertHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CDF16549232EFBAF00EDFE22 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CDF1654A232EFBC100EDFE22 /* AlertHelperTests.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +344,9 @@
 			files = (
 				CDF164CF232C473F00EDFE22 /* LaunchScreen.storyboard in Resources */,
 				CDF164CC232C473F00EDFE22 /* Assets.xcassets in Resources */,
+				CDF16532232EA3D200EDFE22 /* SF-Pro-Display-Bold.otf in Resources */,
+				CDF1652B232E9EE800EDFE22 /* SF-Pro-Display-Semibold.otf in Resources */,
+				CDF16529232E9EE800EDFE22 /* SF-Pro-Display-Regular.otf in Resources */,
 				CDF164CA232C473E00EDFE22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +355,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF1652C232E9EE800EDFE22 /* SF-Pro-Display-Semibold.otf in Resources */,
+				CDF1652A232E9EE800EDFE22 /* SF-Pro-Display-Regular.otf in Resources */,
+				CDF16533232EA3D200EDFE22 /* SF-Pro-Display-Bold.otf in Resources */,
 				CDF16516232D83CF00EDFE22 /* QuizModel.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,12 +370,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDF16508232D5C9300EDFE22 /* QuizAPI.swift in Sources */,
+				CDF16535232EA71B00EDFE22 /* FooterView.swift in Sources */,
+				CDF16521232E979A00EDFE22 /* Colors.swift in Sources */,
+				CDF16544232EEE9300EDFE22 /* QuizViewModel.swift in Sources */,
 				CDF1650D232D5FD700EDFE22 /* NetworkManager.swift in Sources */,
+				CDF16547232EFB2700EDFE22 /* AlertHelper.swift in Sources */,
 				CDF16506232D4E3D00EDFE22 /* NetworkRouter.swift in Sources */,
+				CDF16526232E996A00EDFE22 /* Fonts.swift in Sources */,
 				CDF1650F232D790A00EDFE22 /* NetworkErrors.swift in Sources */,
 				CDF1650B232D5E1900EDFE22 /* QuizModel.swift in Sources */,
 				CDF164FA232D4A9300EDFE22 /* EndpointProtocol.swift in Sources */,
 				CDF164C7232C473E00EDFE22 /* ViewController.swift in Sources */,
+				CDF1652F232EA39300EDFE22 /* FontFamily.swift in Sources */,
+				CDF1651D232E96ED00EDFE22 /* QuizView.swift in Sources */,
 				CDF164C5232C473E00EDFE22 /* AppDelegate.swift in Sources */,
 				CDF164FC232D4AF400EDFE22 /* HTTPTypes.swift in Sources */,
 			);
@@ -287,10 +392,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF1654C232EFBC100EDFE22 /* AlertHelperTests.swift in Sources */,
+				CDF16530232EA39300EDFE22 /* FontFamily.swift in Sources */,
+				CDF1653C232EC19600EDFE22 /* Colors.swift in Sources */,
+				CDF16536232EA71B00EDFE22 /* FooterView.swift in Sources */,
 				CDF1651B232D87F200EDFE22 /* QuizModelTests.swift in Sources */,
 				CDF16513232D7D6100EDFE22 /* QuizAPITests.swift in Sources */,
 				CDF16518232D843400EDFE22 /* XCTestCaseExtension.swift in Sources */,
 				CDF164DA232C473F00EDFE22 /* quizchallengeTests.swift in Sources */,
+				CDF1653B232EC18900EDFE22 /* Fonts.swift in Sources */,
+				CDF16548232EFB2700EDFE22 /* AlertHelper.swift in Sources */,
+				CDF16524232E983100EDFE22 /* ColorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

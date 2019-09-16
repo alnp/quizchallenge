@@ -22,4 +22,15 @@ class AlertHelper {
 
         return alertController
     }
+
+    static func createAlert(title: String, message: String?,
+                            buttonTitle: String,
+                            handler: @escaping () -> Void ) -> UIAlertController {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: buttonTitle, style: .default) { UIAlertAction in
+            handler()
+        }
+        alertController.addAction(alertAction)
+        return alertController
+    }
 }
