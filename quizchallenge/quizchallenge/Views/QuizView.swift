@@ -2,6 +2,8 @@ import UIKit
 
 class QuizView: UIView {
 
+    var delegate: UITextFieldDelegate?
+    var dataSource: TableViewDataSource?
     var footerBottomConstraint: NSLayoutConstraint?
 
     private var containerView = UIView()
@@ -16,7 +18,7 @@ class QuizView: UIView {
         return label
     }()
 
-    private var textField: UITextField = {
+    var textField: UITextField = {
         let textField = UITextField()
         textField.layer.cornerRadius = CGFloat(12)
         textField.enablesReturnKeyAutomatically = false
@@ -24,24 +26,26 @@ class QuizView: UIView {
         textField.backgroundColor = .arcGrey
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 20))
         textField.leftViewMode = .always
-        textField.placeholder = "Insert Word"
+        textField.placeholder = LocalizedStrings.insertWord
+        textField.isEnabled = false
         textField.translatesAutoresizingMaskIntoConstraints = false
 
         return textField
-    }()
+        }()
 
-    private let tableView: UITableView = {
+    let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LabelCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: ReusableIdentifier.label)
         tableView.backgroundColor = .white
         tableView.rowHeight = UITableView.automaticDimension
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.allowsSelection = false
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
         tableView.tableFooterView = UIView()
         return tableView
     }()
 
-    private let footerView = FooterView()
+    let footerView = FooterView()
 
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -99,19 +103,34 @@ class QuizView: UIView {
     }
 
     private func bindLayoutEvents() {
-//        button.addTarget(self, action: #selector(buttonHandler), for: .touchUpInside)
+        textField.delegate = delegate
+        tableView.dataSource = dataSource
     }
 
-    @objc func buttonHandler() {
-//        didTapButton?()
+    private func updateCounter(_ number: Int) {
+        self.footerView.counter = number
     }
 
-    func show(question: String) {
+    func show(question: String, words: Int, seconds: Int ) {
         DispatchQueue.main.async {
             self.containerView.isHidden = question.isEmpty
             self.title.text = question
-
+            self.footerView.show(words: words, timer: seconds)
         }
+    }
+
+    func reloadTableView(with items: [String]){
+        if let datasource = dataSource {
+            datasource.update(with: items)
+        } else {
+            let dataSource = TableViewDataSource(items: items, reuseIdentifier: ReusableIdentifier.label)
+            self.dataSource = dataSource
+        }
+
+        tableView.dataSource = dataSource
+        tableView.delegate = dataSource
+        tableView.reloadData()
+        updateCounter(items.count)
     }
 }
 

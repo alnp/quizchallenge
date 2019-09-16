@@ -1,12 +1,43 @@
 import UIKit
 
-protocol FooterDelegate: class {
-    func wantsToStartOrRestart()
+protocol TimerDelegate: class {
+    func wantsToStart()
+    func wantsToRestart()
+    func timerIsOver()
 }
 
 class FooterView: UIView {
 
-    var delegate: FooterDelegate?
+    public var counter: Int = 0 {
+        didSet {
+            let counterText = "\(counter)".numberFormatted()
+            let totalText = "\(total)".numberFormatted()
+            counterLabel.text = counterText + "/" + totalText
+        }
+    }
+
+    public var total: Int = 0 {
+        didSet {
+            let totalText = "\(total)".numberFormatted()
+            counterLabel.text = "00/\(totalText)"
+        }
+    }
+
+    public var timerSeconds: Int = 5 {
+        didSet{
+            timerLabel.text = "\(totalSeconds)".timeFormatted()
+        }
+    }
+
+    public var totalSeconds: Int = 0 {
+        didSet{
+            timerLabel.text = "\(totalSeconds)".timeFormatted()
+        }
+    }
+
+    var delegate: TimerDelegate?
+    private var timer = Timer()
+    private var isTimerRunning: Bool = false
     private let buttonHeight: CGFloat = 48.0
 
     private var infoStackView: UIStackView = {
@@ -26,7 +57,7 @@ class FooterView: UIView {
         label.numberOfLines = 0
         label.textAlignment = .left
         label.textColor = .black
-        label.text = "00/00"
+        label.text = "0".numberFormatted()
 
         return label
     }()
@@ -37,7 +68,7 @@ class FooterView: UIView {
         label.numberOfLines = 0
         label.textAlignment = .right
         label.textColor = .black
-        label.text = "05:00"
+        label.text = "300".timeFormatted()
 
         return label
     }()
@@ -58,7 +89,7 @@ class FooterView: UIView {
     private lazy var button: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = CGFloat(buttonHeight / 4.0)
-        button.setTitle("Start", for: .normal)
+        button.setTitle(LocalizedStrings.start, for: .normal)
         button.setTitleColor(.darkOrange, for: .highlighted)
         button.titleLabel?.font = .button
         button.backgroundColor = .arcOrange
@@ -106,14 +137,46 @@ class FooterView: UIView {
         button.addTarget(self, action: #selector(buttonHandler), for: .touchUpInside)
     }
 
-    @objc func buttonHandler() {
-        let title = button.titleLabel?.text == "Start" ? "Reset" : "Start"
-        button.setTitle(title, for: .normal)
-        self.delegate?.wantsToStartOrRestart()
+    @objc private func buttonHandler() {
+        !isTimerRunning ? startTimer() : restartTimer()
     }
 
-    func show(words: String, timer: String) {
-        counterLabel.text = words
-        timerLabel.text = timer
+    private func startTimer() {
+        self.delegate?.wantsToStart()
+        button.setTitle(LocalizedStrings.reset, for: .normal)
+        totalSeconds = timerSeconds
+        self.timer = Timer.scheduledTimer(timeInterval: 1,
+                                          target: self,
+                                          selector: #selector(updateTime),
+                                          userInfo: nil,
+                                          repeats: true)
+        isTimerRunning = true
+    }
+
+    private func restartTimer() {
+        self.delegate?.wantsToRestart()
+        button.setTitle(LocalizedStrings.start, for: .normal)
+        timer.invalidate()
+        isTimerRunning = false
+        totalSeconds = timerSeconds
+    }
+
+    @objc private func updateTime() {
+        guard totalSeconds > 0 else {
+            timer.invalidate()
+            delegate?.timerIsOver()
+            return
+        }
+        totalSeconds -= 1
+    }
+
+    func stopTimer() {
+        timer.invalidate()
+    }
+
+    func show(words: Int, timer: Int) {
+        total = words
+        timerSeconds = timer
+        restartTimer()
     }
 }

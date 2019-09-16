@@ -4,12 +4,12 @@ import XCTest
 class QuizAPITests: XCTestCase {
     
     func testDefaultAPIValues() {
-        let environmentBaseURL = QuizAPI.quiz(id: 1).environmentBaseURL
-        let baseURL = QuizAPI.quiz(id: 1).baseURL
-        let path = QuizAPI.quiz(id: 1).path
-        let httpMethod = QuizAPI.quiz(id: 1).httpMethod
-        let task = QuizAPI.quiz(id: 1).task
-        let headers = QuizAPI.quiz(id: 1).headers
+        let environmentBaseURL = QuizAPI.quiz.environmentBaseURL
+        let baseURL = QuizAPI.quiz.baseURL
+        let path = QuizAPI.quiz.path
+        let httpMethod = QuizAPI.quiz.httpMethod
+        let task = QuizAPI.quiz.task
+        let headers = QuizAPI.quiz.headers
 
         let expectedEnvironmentBaseURL = "https://codechallenge.arctouch.com/"
         let expectedBaseURL: URL? = URL(string: "https://codechallenge.arctouch.com/")

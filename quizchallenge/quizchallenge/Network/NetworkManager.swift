@@ -15,7 +15,7 @@ class NetworkManager: NetworkManagerType {
     func getQuiz(completion: @escaping (_ result: Result<QuizModel>) -> ()) {
         router.request(.quiz, completion: { data, response, error in
             if error != nil {
-                completion(.failure(NetworkErrorRequest.noConnection))
+                completion(.failure(NetworkError.noConnection))
             }
 
             if let response = response as? HTTPURLResponse {
@@ -23,14 +23,14 @@ class NetworkManager: NetworkManagerType {
                 switch result {
                 case .success:
                     guard let responseData = data else {
-                        completion(.failure(NetworkErrorResponse.noData))
+                        completion(.failure(NetworkError.noData))
                         return
                     }
                     do {
                         let apiResponse = try JSONDecoder().decode(QuizModel.self, from: responseData)
                         completion(.success(apiResponse))
                     }catch {
-                        completion(.failure(NetworkErrorResponse.unableToDecode))
+                        completion(.failure(NetworkError.unableToDecode))
                     }
                 case .failure(let networkFailureError):
                     completion(.failure(networkFailureError))
@@ -42,8 +42,8 @@ class NetworkManager: NetworkManagerType {
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<URLResponse> {
         switch response.statusCode {
         case 200...299: return .success(response)
-        case 501...599: return .failure(NetworkErrorResponse.badRequest)
-        default: return .failure(NetworkErrorResponse.failed)
+        case 501...599: return .failure(NetworkError.badRequest)
+        default: return .failure(NetworkError.failed)
         }
     }
 }
